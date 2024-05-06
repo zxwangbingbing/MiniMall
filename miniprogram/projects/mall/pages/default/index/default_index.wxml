@@ -1,0 +1,108 @@
+<view class="main">
+
+	<view class="up">
+		<image mode="widthFix" src="../../../images/home.png" />
+	</view>
+	<view wx:if="{{!isLoad}}" class="margin-top load loading text-l load-project"></view>
+	<view wx:else class="down">
+		<view class="box">
+			<view class="line1">
+				<view class="query">
+					<view class="left">
+						<text class="icon-search"></text>
+						<input type="text" model:value="{{query}}" placeholder="搜索你感兴趣的店铺" confirm-type="search" bindconfirm="bindSearchConfirm" maxlength="100"></input>
+					</view>
+					<view class="right" bind:tap="bindSearchConfirm">
+						搜索
+					</view>
+				</view>
+			</view>
+			<view class="swiper-box">
+				<swiper wx:if="{{swiper.length>0}}" class="swiper" style="height:250rpx" indicator-active-color="#CF9F79" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{circular}}" vertical="{{false}}" interval="3000" duration="500" previous-margin="0rpx" next-margin="0rpx">
+					<swiper-item wx:for="{{swiper}}" wx:key="k">
+						<image bindtap="url" data-url="{{item.type=='外部链接'?'../web/web?url=' + item.url:item.url}}" style="height:250rpx" lazy-load="{{true}}" src="{{item.img[0]}}" mode="aspectFill" class="swiper-item-images loading" />
+					</swiper-item>
+				</swiper>
+			</view>
+		</view>
+
+		<view class="box card-project shadow-project">
+
+			<view class="menu">
+				<view class="item" bind:tap="url" data-url="../../news/index/news_index?id=1">
+					<image mode="aspectFill" lazy-load="{{true}}" src="../../../images/menu/0.png" />
+					<text>公告通知</text>
+				</view>
+				<view class="item" bind:tap="url" data-url="../../news/index/news_index?id=2">
+					<image mode="aspectFill" lazy-load="{{true}}" src="../../../images/menu/5.png" />
+					<text>打折促销</text>
+				</view>
+				<view class="item" bind:tap="url" data-type="relaunch" data-url="../../product/all/product_all">
+					<image mode="aspectFill" lazy-load="{{true}}" src="../../../images/menu/1.png" />
+					<text>楼层导航</text>
+				</view>
+				<view class="item" bind:tap="url" data-type="relaunch" data-url="../../product/all/product_all?flag=cate">
+					<image mode="aspectFill" lazy-load="{{true}}" src="../../../images/menu/2.png" />
+					<text>业态导航</text>
+				</view>
+				<view class="item" bind:tap="url" data-type="relaunch" data-url="../../activity/index/activity_index">
+					<image mode="aspectFill" lazy-load="{{true}}" src="../../../images/menu/3.png" />
+					<text>商场活动</text>
+				</view>
+				<view class="item" bind:tap="url" data-type="relaunch" data-url="../../product/order/product_order">
+					<image mode="aspectFill" lazy-load="{{true}}" src="../../../images/menu/4.png" />
+					<text>品牌排行</text>
+				</view> 
+				
+				<view class="item" bind:tap="url" data-url="../../about/index/about_index?key=SETUP_CONTENT_CONTACT">
+					<image mode="aspectFill" lazy-load="{{true}}" src="../../../images/menu/7.png" />
+					<text>商场服务</text>
+				</view>
+				<view class="item" bind:tap="url" data-url="../../info/add/info_add">
+					<image mode="aspectFill" lazy-load="{{true}}" src="../../../images/menu/info.png" />
+					<text>投诉建议</text>
+				</view>
+			</view>
+		</view>
+
+
+		<view class="box" style="background-color: unset;padding:20rpx 0">
+			<view class="title">
+				<view class="t1"><text class="icon-hotfill"></text></view>
+				<view class="t2">推荐店铺</view>
+				<view class="t3"> </view>
+			</view>
+			<view class="hot">
+				<view class="item shadow-project" bindtap="url" data-url="../../product/detail/product_detail?id={{item._id}}" wx:for="{{vouchList}}" wx:key="key">
+					<!--<view class="floor bg-brown light">{{item.PRODUCT_OBJ.floor}}</view>-->
+					<view class="left">
+						<view class="line1">
+							<view class="title content-cut-two">
+								<text>{{item.PRODUCT_TITLE}}</text>
+							</view>
+						</view>
+						<view class="line2 content-cut-one">
+							<text>{{item.PRODUCT_CATE_NAME[0]}}</text>
+						</view>
+						<view class="line2">
+							<text><text class="icon-location"></text>{{item.PRODUCT_OBJ.address}}</text>
+						</view>
+					</view>
+					<view class="right">
+						<image mode="widthFix" lazy-load="{{true}}" class="loading" src="{{item.PRODUCT_OBJ.logo[0]}}">
+						</image>
+					</view>
+
+
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view style="height:100rpx"></view>
+</view>
+
+<block wx:if="{{skin.IS_SUB}}">
+	<import src="../../tpls/menu_tpl.wxml" />
+	<template is="menuTpl" data="{{curMenu:'home_index',returnHome:false}}" />
+</block>
