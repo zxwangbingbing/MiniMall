@@ -1,0 +1,50 @@
+<block wx:if="{{isLoad}}">
+	<cmpt-comm-list type="my_activity_join" search="{{search||''}}" _menus="{{sortMenus}}" _items="{{sortItems}}" route="info/my_info_list" isTotalMenu="{{true}}" sortMenusDefaultIndex="0" topBottom="120" placeholder="搜索" bind:list="bindCommListCmpt">
+
+		<view slot="searchEnd">
+
+		</view>
+
+		<!-- List Begin -->
+		<view class="text-pic-list-box padding-project">
+
+			<view class="item card-project shadow-project" wx:for="{{dataList.list}}" wx:key="index">
+
+				<view class="author">
+					<text class="text-cut">分类：{{item.INFO_CATE_NAME}}</text>
+				</view>
+				<view class="author">
+					<text class="text-cut">姓名：{{item.INFO_OBJ.name}}</text>
+				</view>
+
+				<view class="author">
+					<text class="text-cut">电话：{{item.INFO_OBJ.phone}}</text>
+				</view>
+
+				<view class="author">
+					<text class="text-grey">提交时间：{{item.INFO_ADD_TIME}}</text>
+				</view>
+
+				<view class="data data-button">
+					<button bindtap="url" data-url="../edit/info_edit?id={{item._id}}" class="btn mid bg-gray text-black"><text class="icon-edit margin-right-xxs"></text>详情 / 修改</button>
+
+					<button bindtap="bindDelTap" data-id="{{item._id}}" class="btn mid bg-gray text-black"><text class="icon-delete margin-right-xxs text-red"></text>删除</button>
+
+				</view>
+
+			</view>
+
+			<!--load begin-->
+			<import src="../../../../../tpls/public/list_load_tpl.wxml" />
+			<template is="listLoadTpl" data="{{skin:'load-project',dataList}}" />
+			<!--load end-->
+
+		</view>
+		<!-- List END -->
+
+	</cmpt-comm-list>
+
+	<!--  button Begin -->
+	<!--  button END -->
+
+</block>

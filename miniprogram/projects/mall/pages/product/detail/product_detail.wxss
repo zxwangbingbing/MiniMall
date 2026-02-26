@@ -1,0 +1,164 @@
+ @import "../../../style/skin.wxss";
+
+ .main {
+ 	padding: 0;
+ }
+
+ .cover {
+ 	width: 100%;
+ }
+
+ .cover image {
+ 	width: 100%;
+ }
+
+ .detail {
+ 	width: 100%;
+ 	position: relative;
+ 	background-color: #fff;
+ 	padding: 0 0 20rpx;
+ }
+
+ .detail .title {
+ 	width: 100%;
+ 	padding: 20rpx 30rpx;
+ 	display: flex;
+ }
+
+ .detail .title .left {
+ 	margin-right: 20rpx;
+ 	width: 180rpx;
+ 	height: 180rpx;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	border-radius: 10rpx;
+ 	overflow: hidden;
+ }
+
+ .detail .title .left>image {
+ 	max-width: 180rpx;
+ 	max-height: 180rpx;
+ 	border: 2rpx solid #eee;
+ 	border-radius: inherit;
+ }
+
+ .detail .title .right {
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-between;
+ 	padding: 10rpx 0;
+ }
+
+ .detail .title .right .right-line {  
+	 width: 100%;
+	 display: flex;
+	 flex-direction: column;
+}
+
+ .detail .title .right .line1 {
+ 	font-size: 36rpx;
+ 	color: #000;
+ }
+
+ .detail .title .right .line2 {
+ 	font-size: 24rpx;
+ 	color: #999;
+ }
+
+ .detail .address {
+ 	width: 100%;
+ 	text-align: left;
+ 	color: #666;
+ 	font-size: 24rpx;
+ 	padding: 10rpx 30rpx;
+ }
+
+ .detail .line3 {
+ 	width: 100%;
+ 	font-size: 28rpx;
+ 	color: #333;
+ 	padding: 30rpx;
+ }
+
+ .detail .line3>view {
+ 	padding: 10rpx 0;
+ 	border-bottom: 2rpx solid #eee;
+ }
+
+ .detail .content {
+ 	color: #666;
+ 	font-size: 26rpx;
+ 	text-align: justify;
+ 	line-height: 1.8;
+ 	padding: 0 30rpx;
+ }
+
+ .detail .pics {
+ 	margin-top: 30rpx;
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: center;
+ 	align-items: center;
+ }
+
+ .detail .pics image {
+ 	width: 100%;
+ 	border-radius: 10rpx;
+ 	margin-bottom: 0rpx;
+ }
+
+
+ .bottom-line {
+ 	width: 100%;
+ 	height: 140rpx;
+ 	background-color: #fff;
+ 	border-radius: 60rpx;
+ 	display: flex;
+ 	justify-content: flex-end;
+ 	align-items: center;
+ 	padding: 0 20rpx;
+ }
+
+ .bottom-line .bt {
+ 	padding: 20rpx 40rpx;
+ 	background-color: var(--projectColor);
+ 	border-radius: 50rpx;
+ 	color: #fff;
+ 	text-align: center;
+ 	font-size: 28rpx;
+ }
+
+ .small-t {
+ 	font-size: 28rpx;
+ 	font-weight: normal;
+ 	margin-left: 3rpx;
+ }
+
+ .bottom-line {
+ 	padding: 0
+ }
+
+ .cmpt-biz-detail-mode2 .inner .slot-inner {
+ 	flex: 1;
+ 	display: flex;
+ 	justify-content: flex-start;
+ }
+
+ .cmpt-biz-detail-mode2 .inner {
+ 	padding: 0 !important;
+ }
+
+ .bt-tag {
+ 	position: absolute;
+ 	top: 10rpx;
+ 	right: 14rpx;
+ 	z-index: 9999;
+ 	font-size: 24rpx;
+ 	padding: 2rpx 12rpx;
+ 	border-radius: 30%;
+ }
+
+ .bt-detail {
+	background-image: linear-gradient(45deg, #CF9F79, #ecc5a5, #e4c1a5);
+ }

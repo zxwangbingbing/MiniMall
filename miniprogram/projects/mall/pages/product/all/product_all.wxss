@@ -1,0 +1,227 @@
+@import "../../../style/skin.wxss";
+
+page {
+	background-color: #fff;
+}
+
+.main {
+	padding: 0 !important
+}
+
+
+.query {
+	width: 100%;
+	display: flex;
+	padding: 20rpx 20rpx 26rpx;
+	align-items: center;
+	background-color: #fff;
+}
+
+.query .left {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	background-color: #f8f8f8;
+	padding: 10rpx 20rpx;
+	border-radius: 24rpx;
+	font-size: 24rpx;
+}
+
+.query .left .icon-search {
+	color: #999;
+	font-size: 30rpx;
+	margin-right: 20rpx;
+	font-weight: bold;
+}
+
+.query .left .icon-roundclose {
+	color: #999;
+	font-size: 32rpx;
+	width: 100rpx;
+	text-align: right;
+}
+
+.query .left input {
+	width: 100%;
+}
+
+
+.query .right {
+	padding: 10rpx 30rpx;
+	display: flex;
+	color: #fff;
+	justify-content: center;
+	background-image: linear-gradient(45deg, #CF9F79, #ecc5a5, #e4c1a5);
+	border-radius: 28rpx;
+	text-align: center;
+	font-size: 26rpx;
+	margin-left: 20rpx;
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 10rpx 120rpx 40rpx;
+}
+
+.menu .item {
+	padding: 12rpx 40rpx;
+	background-color: #f8f8f8;
+	border: 2rpx solid #eee;
+	border-radius: 30rpx;
+	font-size: 26rpx;
+	color: #888;
+}
+
+.menu .item.cur {
+	border-color: var(--projectColor);
+	background-color: #fdf3eb;
+	color: var(--projectColor)
+}
+
+.scroll-list {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.scroll-list .left {
+	float: left;
+	width: 260rpx;
+	background-color: #eee;
+	height: 100vh;
+}
+
+.scroll-list .mask {
+	width: inherit;
+	background-color: #fff;
+}
+
+.scroll-list .left .title {
+	width: inherit;
+	padding: 30rpx 16rpx;
+	text-align: center;
+	background-color: #eee;
+	font-size: 28rpx;
+	color: #333;
+}
+
+.scroll-list .left .title.cur {
+	background-color: #fff;
+	color: var(--projectColor);
+	font-weight: bold;
+	position: relative;
+}
+
+.scroll-list .left .title.cur:after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 50%;
+	width: 6rpx;
+	height: 30%;
+	border-radius: 2rpx;
+	background-color: var(--projectColor);
+	transform: translateY(50%);
+}
+
+.scroll-list .left .title.pre {
+	border-radius: 0 0 20rpx;
+}
+
+.scroll-list .left .title.next {
+	border-radius: 0 20rpx 0 0;
+}
+
+.scroll-list .right {
+	height: 100vh;
+}
+
+.scroll-list .right .item {
+	padding: 20rpx;
+
+}
+
+.scroll-list .right .item .tt {
+	display: flex;
+	font-size: 28rpx;
+	color: #333;
+	margin-bottom: 20rpx;
+	padding: 0 20rpx;
+	align-items: center;
+}
+
+.scroll-list .right .item .tt .icon-left {
+	width: 12rpx;
+	height: 30rpx;
+	background-image: linear-gradient(145deg, #ecc5a5, #fae7d6, #ecc5a5);
+	margin-right: 10rpx;
+	border-radius: 8rpx;
+}
+
+.productList {
+	width: 100%;
+	padding: 0rpx 20rpx;
+}
+
+.itm {
+	position: relative;
+	width: 100%;
+	padding: 20rpx 20rpx;
+	border-radius: 20rpx;
+	overflow: hidden;
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20rpx;
+	display: flex;
+}
+
+.itm .img {
+	width: 140rpx;
+	height: 140rpx;
+	margin-right: 20rpx;
+	border-radius: 10rpx;
+	overflow: hidden; 
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.itm .img .floor {
+	position: absolute;
+	top: 0;
+	right: 0;  
+	border-bottom-left-radius: 30rpx;
+	padding: 4rpx 2rpx 4rpx 10rpx;
+	z-index: 9;
+	background-color: var(--orange);
+	color: #fff;
+	font-size: 22rpx;
+}
+
+.itm .img>image {
+	max-width: 140rpx;
+	max-height: 140rpx;
+	border-radius: 6rpx;
+}
+
+.itm .detail {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.itm .detail .line1 {
+	font-size: 28rpx;
+	color: #333;
+	font-weight: bold;
+	padding-bottom: 10rpx; 
+}
+
+.itm .detail .line2 {
+	font-size: 24rpx;
+	color: #999;
+	margin-top: 8rpx;
+}

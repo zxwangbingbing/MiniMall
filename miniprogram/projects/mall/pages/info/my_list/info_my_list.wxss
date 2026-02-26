@@ -1,0 +1,18 @@
+@import "../../../../../style/public/article_list.wxss";
+@import "../../../style/skin.wxss"; 
+
+.text-pic-list-box .item {
+	padding: 20rpx 30rpx 20rpx 40rpx;
+	position: relative;
+	overflow: hidden;
+} 
+ 
+
+.btn.mid {
+	padding: 0 30rpx;  
+}
+
+.text-pic-list-box .item .author {
+	font-size: 24rpx;
+	color: #333;
+}  
